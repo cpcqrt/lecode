@@ -2,7 +2,7 @@
 
 template <typename T>
 void debug_print(const char* name, T value){
-	std::cout << name << ": "<< value;
+	std::cout << name << ": "<< value << std::endl;
 }
 
 // in case DEBUG_PRINT("aaa");

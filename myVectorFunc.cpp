@@ -1,11 +1,20 @@
 #include <vector>
 #include <iostream>
 
+/*
+*    ** Dont ** output the endl to operator<< overloading. 
+*
+*    ex: cout << some int
+*    ex: cout << some vec
+*
+*    Both should have the same behavior. i.e. no endl at the end
+**/
+
 template <typename T>
 std::ostream& operator<<(std::ostream& os, const std::vector<T>& v){
 	os << "[ ";
 	for(auto const& c : v) os << c << ' ';
-	os << "]" << std::endl;
+	os << "]";
 	return os;
 	
 	// faster ?
@@ -24,8 +33,8 @@ std::ostream& operator<<(
 	)
 {
 	os << "[" << std::endl;
-	for(auto const& c : vv) os << "  " << c ;
-	os << "]" << std::endl;
+	for(auto const& c : vv) os << "  " << c  << std::endl;
+	os << "]";
 	return os;
 }
 
