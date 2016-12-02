@@ -1,4 +1,5 @@
 # include "../ListNode.cpp"
+# include "../GeneralFunc.cpp"
 # include <vector>
 
 typedef ListNode_Base<int> ListNode;
@@ -41,9 +42,9 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 int main(){
 	std::vector<int> v1 {2,4,3,9};
 	std::vector<int> v2 {5,6,4,3};
-    auto l1 = assign_ListNode(v1); // print_ListNode(l1);
-	auto l2 = assign_ListNode(v2); // print_ListNode(l2);
-	auto l3 = addTwoNumbers(l1,l2); print_ListNode(l3);
+    auto l1 = assign_ListNode(v1); // DEBUG_PRINT(l1);
+	auto l2 = assign_ListNode(v2); // DEBUG_PRINT(l2);
+	auto l3 = addTwoNumbers(l1,l2); DEBUG_PRINT(l3);
 	
 	return 0;
 }
