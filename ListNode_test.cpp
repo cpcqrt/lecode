@@ -7,7 +7,9 @@ int main(){
 	// test assign, print, clear
 	std::vector<int> v {1,2,3,5};
 	auto l = assign_ListNode(v);
-	print_ListNode(l);
+	
+	std::cout << l;
+	
 	clear_ListNode(l);
 	
 	return 0;

@@ -24,19 +24,22 @@ ListNode_Base<T>* assign_ListNode(const std::vector<T> &v) {
 	return start;
  }
  
- 
-template <typename T>
-void print_ListNode(const ListNode_Base<T> * head) {
+template<typename T>
+std::ostream& operator<<(std::ostream& os, const ListNode_Base<T>* head){	
 	// use 'type const *head' means a "constant pointer" to type
 	// here we use "pointer point to const content"
+	
+	os << "[ ";
 	const ListNode_Base<T>* current = head; 
 	while (current != NULL) {
-		std::cout <<  current->val << " ";
+		os <<  current->val << ' ';
 		current = current->next;
 	}
-	std:: cout << std::endl;
+	os << "]";
+	return os;
 }
 
+ 
 template<typename T>
 void clear_ListNode(ListNode_Base<T> * head){
 	while (head != NULL) {
@@ -45,4 +48,10 @@ void clear_ListNode(ListNode_Base<T> * head){
 		head = head -> next;
 		delete (ptr);
 	}
+}
+
+/* Deprecated function list */
+template <typename T>
+void print_ListNode(const ListNode_Base<T> * head) {
+	std::cout << "Deprecated print List Node function: " << head;
 }
