@@ -1,0 +1,4 @@
+npp_save
+cd $(CURRENT_DIRECTORY)
+g++.exe ¡§$(FILE_NAME)¡¨
+cmd /c ¡§$(CURRENT_DIRECTORY)\a.exe¡¨
