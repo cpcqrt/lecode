@@ -1,4 +1,4 @@
 npp_save
 cd $(CURRENT_DIRECTORY)
-g++.exe ¡§$(FILE_NAME)¡¨
-cmd /c ¡§$(CURRENT_DIRECTORY)\a.exe¡¨
+g++.exe $(FILE_NAME) -std=c++11
+a.exe
